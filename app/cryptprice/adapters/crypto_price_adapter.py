@@ -4,6 +4,8 @@ import logging
 import requests
 from rest_framework import status
 
+from cryptprice.exceptions.app_exceptions import APPServerError
+
 __author__ = "Mihail Butnaru"
 __copyright__ = "2020 All rights reserved!"
 
@@ -23,7 +25,7 @@ class CryptoPriceAdapter:
         if response.status_code == status.HTTP_200_OK:
             return float(json.loads(response.content)[0])
 
-        raise ValueError("Internal server error!!")  # custom exceptions
+        raise APPServerError(detail="Internal server error!")
 
 
 crypto_price_adapter = CryptoPriceAdapter()
