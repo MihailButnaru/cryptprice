@@ -25,7 +25,7 @@ class Base(Configuration):
     )
 
     DEBUG = BooleanValue(
-        environ_prefix=None, environ_required=True, environ_name="DEBUG"
+        environ_prefix=None, environ_name="DEBUG", default=True
     )
 
     ALLOWED_HOSTS = ListValue(
@@ -80,9 +80,9 @@ class Base(Configuration):
         {
             "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
         },
-        {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
-        {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
-        {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
+        {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", },
+        {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator", },
+        {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", },
     ]
 
     LANGUAGE_CODE = "en-us"
@@ -96,3 +96,25 @@ class Base(Configuration):
     USE_TZ = True
 
     STATIC_URL = "/static/"
+
+    # ----> SLACK CONFIGURATION <------
+
+    SLACK_BOT_USER_OAUTH_ACCESS_TOKEN = SecretValue(
+        environ_prefix=None,
+        environ_required=True,
+        environ_name="SLACK_BOT_USER_OAUTH_ACCESS_TOKEN",
+    )
+
+    SLACK_CLIENT_ID = SecretValue(
+        environ_prefix=None, environ_required=True, environ_name="SLACK_CLIENT_ID"
+    )
+
+    SLACK_CLIENT_SECRET = SecretValue(
+        environ_prefix=None, environ_required=True, environ_name="SLACK_CLIENT_SECRET"
+    )
+
+    SLACK_VERIFICATION_TOKEN = SecretValue(
+        environ_prefix=None,
+        environ_required=True,
+        environ_name="SLACK_VERIFICATION_TOKEN",
+    )
