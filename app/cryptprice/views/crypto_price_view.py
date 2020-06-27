@@ -68,12 +68,5 @@ class CryptoPriceView(APIView):
             )
 
             return Response(status=status.HTTP_201_CREATED)
-        else:
-            Client.chat_postEphemeral(
-                user=events["user"],
-                channel=events["channel"],
-                text=f"Sorry you must choose from the list provided if you want "
-                f"to see the live price of ['BTC', 'ETH', 'XRP']",
-            )
 
         return Response(status=status.HTTP_200_OK)
