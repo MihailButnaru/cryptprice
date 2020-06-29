@@ -11,6 +11,7 @@ from cryptprice.utilities import validate_verification_token, CRYPTO_CURRENCY
 
 __author__ = "Mihail Butnaru"
 __copyright__ = "2020 All rights reserved!"
+
 _logger = logging.getLogger(__name__)
 
 Client = WebClient(settings.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN)
@@ -18,8 +19,8 @@ Client = WebClient(settings.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN)
 
 class CryptoPriceView(APIView):
     def post(self, request):
-        """Cryptocurrency price will get the data from provider and will
-        run the validations before it notifies the customer with the live price"""
+        """CryptoPriceView will get the data from third party provider and will
+        notify the user with the latest live price of the currency chosen """
         input_data = request.data
 
         token = validate_verification_token(data=input_data)
@@ -68,12 +69,5 @@ class CryptoPriceView(APIView):
             )
 
             return Response(status=status.HTTP_201_CREATED)
-        else:
-            Client.chat_postEphemeral(
-                user=events["user"],
-                channel=events["channel"],
-                text=f"Sorry you must choose from the list provided if you want "
-                f"to see the live price of ['BTC', 'ETH', 'XRP']",
-            )
 
         return Response(status=status.HTTP_200_OK)
