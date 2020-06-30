@@ -27,12 +27,12 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        python -m unittest discover cryptprice
+        python -m unittest discover app
       env:
-        DJANGO_SETTINGS_MODULE: cryptprice.core.settings
+        DJANGO_SETTINGS_MODULE: app.core.settings
         DJANGO_CONFIGURATION: Base
         SECRET_KEY: test
-        DEBUG: True
+        DEBUG: "true"
         ALLOWED_HOSTS: "*"
         SLACK_BOT_USER_OAUTH_ACCESS_TOKEN: bot_token
         SLACK_CLIENT_ID: client_id
