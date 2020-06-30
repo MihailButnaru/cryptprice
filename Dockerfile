@@ -10,6 +10,7 @@ ENV SLACK_VERIFICATION_TOKEN verification_token
 
 RUN mkdir /cryptprice
 
+ADD ./app /cryptprice
 ADD requirements.txt /cryptprice/requirements.txt
 RUN pip install -r /cryptprice/requirements.txt
 
@@ -18,4 +19,4 @@ WORKDIR /cryptprice
 
 EXPOSE 8000
 
-CMD gunicorn -b :8000 cryptprice.core.wsgi
+CMD gunicorn -b :8000 core.wsgi
