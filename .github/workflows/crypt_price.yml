@@ -27,9 +27,9 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        python -m unittest discover crypto_service
+        python -m unittest discover cryptprice
       env:
-        DJANGO_SETTINGS_MODULE: crypto_service.core.settings
+        DJANGO_SETTINGS_MODULE: cryptprice.core.settings
         DJANGO_CONFIGURATION: Base
         SECRET_KEY: test
         DEBUG: True
