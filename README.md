@@ -1,5 +1,5 @@
 <div align="center">
-<h1> CryptPrice Slack Chat-Bot </h1>
+<h1> CryptPrice Chat-Bot on Slack</h1>
 <p1>The CryptPrice Bot is designed to allow you to see the current price
 of different crypto currencies on your slack channel.</p1>
 </div>
