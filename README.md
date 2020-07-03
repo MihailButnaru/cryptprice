@@ -18,7 +18,7 @@ Visit:
 
 
 ## Instalation
-Start by building a dvelopment environment
+Clone the project and start by building a dvelopment environment
 1. Install the dependencies of project
 ```
 $ pip install -r requirements.txt
