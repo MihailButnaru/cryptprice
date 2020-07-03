@@ -7,7 +7,11 @@ from rest_framework.views import APIView
 from slack import WebClient
 
 from cryptprice.adapters import get_crypto_currency_price
-from cryptprice.utilities import validate_verification_token, CRYPTO_CURRENCY
+from cryptprice.utilities import (
+    validate_verification_token,
+    CRYPTO_CURRENCY,
+    verification_challenge
+)
 
 __author__ = "Mihail Butnaru"
 __copyright__ = "2020 All rights reserved!"
@@ -27,6 +31,11 @@ class CryptoPriceView(APIView):
 
         if not token:
             return Response(status=status.HTTP_403_FORBIDDEN)
+
+        verification = verification_challenge(data=input_data)
+
+        if verification:
+            return Response(status=status.HTTP_200_OK, data=input_data)
 
         # necessary in order to get the message from each event
         events = input_data.get("event", None)
