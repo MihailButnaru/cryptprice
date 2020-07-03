@@ -4,3 +4,4 @@ djangorestframework==3.11.0
 slackclient==2.7.1
 slackeventsapi==2.1.0
 gunicorn==20.0.4
+requests==2.24.0
