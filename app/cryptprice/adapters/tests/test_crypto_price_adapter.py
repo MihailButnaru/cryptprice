@@ -9,7 +9,7 @@ from cryptprice.adapters.crypto_price_adapter import (
     get_crypto_currency_price,
 )
 from cryptprice.exceptions.app_exceptions import APPServerError
-from cryptprice.utilities.mock_data import FakeRequest
+from cryptprice.utilities.tests.mock_data import FakeRequest
 
 
 class TestCryptoPriceAdapter(TestCase):
