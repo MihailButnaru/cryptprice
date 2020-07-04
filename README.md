@@ -1,11 +1,13 @@
 <div align="center">
 <h1> CryptPrice Chat-Bot on Slack</h1>
+
+![CryptPrce Chat Bot](https://github.com/MihailButnaru/cryptprice/blob/develop/images/cryptprice_bot.png)
+
 <p1>The CryptPrice Bot is designed to allow you to see the current price
 of different crypto currencies on your slack channel.</p1>
 </div>
 <hr/>
 
-![CryptPrce Chat Bot](https://github.com/MihailButnaru/cryptprice/blob/develop/images/cryptprice_bot.png)
 
 ## Intro
 Slack is a team collaboration hub that brings every member of a team
