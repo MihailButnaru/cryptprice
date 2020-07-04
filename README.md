@@ -29,7 +29,7 @@ $ pip install -r requirements.txt
 ```
 2. Create the environment variable file (.env) to include
 the Slack credentials:
-You can get all the credentials when you create your slack app: Create your slack app: https://api.slack.com/apps/new
+You can get all the credentials when you create your slack app: https://api.slack.com/apps/new
 ```
 SLACK_BOT_USER_OAUTH_ACCESS_TOKEN = 'your bot user oauth token here'
 SLACK_CLIENT_ID = 'your client id here'
