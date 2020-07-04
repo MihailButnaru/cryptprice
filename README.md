@@ -5,6 +5,8 @@ of different crypto currencies on your slack channel.</p1>
 </div>
 <hr/>
 
+![CryptPrce Chat Bot](https://github.com/MihailButnaru/cryptprice/blob/develop/images/cryptprice_bot.png)
+
 ## Intro
 Slack is a team collaboration hub that brings every member of a team
 together and more collaborative. Is a tool that is used by millions of
