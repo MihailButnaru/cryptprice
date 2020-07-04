@@ -36,7 +36,7 @@ crypto_price_adapter = CryptoPriceAdapter()
 
 
 def get_crypto_currency_price(*, crypto_currency: str, currency: str) -> float:
-    """Get the live price data of the crypto currency provider
+    """Get the live price of the crypto-currency
     Args:
         crypto_currency (str): BTC, ETH, XRP
         currency (str): USD, GBP
