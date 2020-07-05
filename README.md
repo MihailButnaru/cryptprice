@@ -18,7 +18,7 @@ CryptPrice allows you to see the current price of the crypto-currencies [BTC, ET
 
 ## Tutorial
 Full tutorial of how to run the CryptPrice Bot. Say Hi when he is running!
-Visit: 
+Visit: https://medium.com/@butnarum/build-a-cryptocurrency-price-bot-on-slack-with-python-using-django-code-included-aa04a0d41c28
 
 
 ## Instalation
