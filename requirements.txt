@@ -1,4 +1,4 @@
-django==3.0.7
+django==3.1.9
 django-configurations==2.2
 djangorestframework==3.11.0
 slackclient==2.7.1
